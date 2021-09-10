@@ -1,4 +1,4 @@
-var express = require('express');  // import express ; we will use expressjs as our server
+var express = require('express'); // import express ; we will use expressjs as our server
 
 // download the crypto modules from npmjs.com
 var crypto = require("crypto");
@@ -8,7 +8,7 @@ var fs = require("fs");
 // initialize expressjs
 var app = express();
 
-var port = 3000;  // runging port
+var port = 3000; // runging port
 
 app.use(express.json());
 
@@ -30,5 +30,5 @@ app.listen(port, () => {
 
 // our get rest api that return the base64 ENCODED code
 app.get('/', (req, res) => {
-    res.send(encryptStringWithRsaPublicKey("Humble23!", "./ProductionCertificate.cer"))
+    res.send(encryptStringWithRsaPublicKey("Your initiator password", "./ProductionCertificate.cer")) // server cal
 });
