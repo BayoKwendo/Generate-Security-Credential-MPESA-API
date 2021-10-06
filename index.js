@@ -30,5 +30,5 @@ app.listen(port, () => {
 
 // our get rest api that return the base64 ENCODED code
 app.get('/', (req, res) => {
-    res.send(encryptStringWithRsaPublicKey("Your initiator password", "./ProductionCertificate.cer")) // server cal
+    res.send(encryptStringWithRsaPublicKey("Humble24!", "./ProductionCertificate.cer"))
 });
